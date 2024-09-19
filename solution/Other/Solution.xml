@@ -33,6 +33,7 @@
         <Address>
           <AddressNumber>1</AddressNumber>
           <AddressTypeCode>1</AddressTypeCode>
+          <Name xsi:nil="true"></Name>
           <City xsi:nil="true"></City>
           <County xsi:nil="true"></County>
           <Country xsi:nil="true"></Country>
@@ -61,6 +62,7 @@
         <Address>
           <AddressNumber>2</AddressNumber>
           <AddressTypeCode>1</AddressTypeCode>
+          <Name xsi:nil="true"></Name>
           <City xsi:nil="true"></City>
           <County xsi:nil="true"></County>
           <Country xsi:nil="true"></Country>
