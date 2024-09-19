@@ -7,6 +7,7 @@ export class AddressAutocomplete implements ComponentFramework.StandardControl<I
 
     private autocomplete: google.maps.places.Autocomplete;
     private value: string;
+private name: string;
     private street: string;
     private city: string;
     private county: string;
@@ -59,6 +60,7 @@ export class AddressAutocomplete implements ComponentFramework.StandardControl<I
                 }
 
                 this.value = "";
+		    this.name = "";
                 this.street = "";
                 this.city = "";
                 this.county = "";
@@ -74,6 +76,9 @@ export class AddressAutocomplete implements ComponentFramework.StandardControl<I
                     let addressPiece = addressComponent.long_name;
 
                     switch (componentType) {
+			    case "name":
+				    this.name = name;
+				    break;
                         case "street_number":
                             streetNumber = ", " + addressPiece;
                             break;
@@ -131,6 +136,7 @@ export class AddressAutocomplete implements ComponentFramework.StandardControl<I
     public getOutputs(): IOutputs {
         return {
             value: this.value,
+		name: this.name,
             street: this.street,
             city: this.city,
             county: this.county,
